@@ -20,10 +20,10 @@ while running:
     keys = pygame.key.get_pressed()
 
 
-    # game logic here
+    # game logic
     # YOUR CODE HERE
 
-    # draw stuff here
+    # render sprites etc on screen
     screen.fill((0, 0, 0))
     # YOUR CODE HERE
 
