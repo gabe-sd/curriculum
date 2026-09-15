@@ -21,7 +21,7 @@ renaming and no other edits:
   recursion, sorting/linked-list basics. See its [README](python-fundamentals/README.md).
 - **`python-turtle/`** (24 files) — turtle graphics: beginner shape exercises, fractals,
   spirographs, turtle races, a two-level tic-tac-toe. See its [README](python-turtle/README.md).
-- **`python-processing/`** (23 files, plus a few `_assets/` image folders) — a Processing-style
+- **`python-processing/`** (23 files; the five needing images live in per-project folders) — a Processing-style
   drawing API distinct from `pygame/`: buttons, collision demos, Game of Life, Breakout, Pong,
   Dino Jump, Frogger, an OOP-focused aim trainer. See its [README](python-processing/README.md).
   This folder has no established conventions yet, unlike `pygame/` (see `CLAUDE.md`).
@@ -33,15 +33,16 @@ issues:
 
 - `python-turtle/turtle_in_space.py` references `space.jpg` and `rocketship.png`, which are not
   present in the archive.
-- `python-processing/bouncing_ball_assets/` holds only a screenshot of the program's own output;
-  `bouncing_ball.py` has no `loadImage(...)` call, so the folder is unused.
+- Projects needing image assets were regrouped into per-project folders (code and images side by
+  side) so their `loadImage(...)` calls resolve; the export's `assets/` nesting had broken them.
+  An unused screenshot that shipped alongside `bouncing_ball.py` was deleted.
 - Third-party sprites of unverified provenance ship in `python-processing/`: the Flappy Bird
   sprite, the Chrome offline-dino and its cactus, and a stock-photo turtle. Replace these before
   relying on the material publicly.
 - No `LICENSE` file at the repo root.
 
-Every other `python-processing/_assets/` folder has been checked against its file's `loadImage(...)`
-calls and resolves correctly.
+All seven `loadImage(...)` calls in `python-processing/` have been confirmed to resolve against the
+files sitting next to them.
 
 ## What was excluded
 

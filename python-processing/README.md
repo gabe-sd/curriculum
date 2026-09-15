@@ -20,24 +20,23 @@ compatibility with whichever library is installed before running them.
 | `fading_circle.py` | Alpha-fade animation using `frameCount` | minimal animation example |
 | `pulsing_circle.py` | Mouse-driven pulsing circle with color cycling | small, clean "juicy" visual-effects example |
 | `rainbow_grid.py` | Nested-loop 2D grid colored by mouse position + time | nice nested-loops/2D-lists example |
-| `bouncing_ball.py` | Basic bounce-off-walls physics | *has a `bouncing_ball_assets/` folder alongside it (one screenshot, not required to run)* |
+| `bouncing_ball.py` | Basic bounce-off-walls physics | no assets needed |
 | `game_of_life.py` | Working Conway's Game of Life | only fully-functional version out of 4 attempts in the export |
 | `aim_labs_oop_intro.py` | Click-to-score aim trainer, explicitly framed as an "OOP Intro" | clean Ball class, best of several Aim Labs variants |
 | `solar_system_simulation.py` | Orbit/rotation demo (`translate`/`rotate`) | clean, well-commented, no image assets needed |
 | `squid_game_rotation_example.py` | Red-Light-Green-Light game demoing `rotate()`/`pushMatrix` | complete, well-commented, example-driven as the title suggests |
-| `jump_game.py` | Minimal gravity/jump mechanic | *needs `jump_game_assets/turtle.png` to run* |
-| `dino_jump.py` | Dino-runner clone: obstacle class, collision, scoring, game over | most complete of ~6 dino-game attempts in the export; *needs `dino_jump_assets/` (cactus/dino images)* |
-| `flappy_bird_starter.py` | Flappy Bird starter with heavy scaffolding comments and an explicit "NEXT:" prompt | reads like a teacher-authored starter, not a finished game; *needs `flappy_bird_starter_assets/`* |
+| `jump_game/` | Minimal gravity/jump mechanic | project folder — code plus `turtle.png` |
+| `dino_jump/` | Dino-runner clone: obstacle class, collision, scoring, game over | most complete of ~6 dino-game attempts in the export; project folder — code plus cactus/dino images |
+| `flappy_bird_starter/` | Flappy Bird starter with heavy scaffolding comments and an explicit "NEXT:" prompt | reads like a teacher-authored starter, not a finished game; project folder — code plus the bird sprite |
 | `frogger.py` | Frogger clone: cars, collision, win/lose | best-organized of several Frogger attempts; has commented-out debug hitbox code worth keeping for teaching |
 | `atari_breakout_finished.py` | Complete Breakout: bricks, paddle bounce physics, game over | best of ~6 Breakout attempts in the export |
 | `pong.py` | Pong vs. a simple AI paddle, with scoring | clean OOP Paddle/Ball structure |
 | `infection_spread_simulation.py` | "Infection spread" simulation using a Ball class + collision checks | interesting simulation/algorithms angle, not just a game |
-| `rock_paper_scissors_gui.py` | Image-button RPS with streak tracking and animation timing | *needs `rock_paper_scissors_gui_assets/` (included alongside it — cactus/dino/turtle images)* |
+| `rock_paper_scissors_gui/` | Image-button RPS with streak tracking and animation timing | project folder — code plus cactus/dino/turtle images |
 
-Several files reference image assets that came along in the export (now sitting in `_assets`
-subfolders next to them). Every `loadImage(...)` call has been checked against its `_assets` folder
-and all of them resolve; the one exception is `bouncing_ball_assets/`, which holds a screenshot of
-the program's output that `bouncing_ball.py` never loads.
+Projects that need image assets get their own folder, with the code and its images side by side —
+that is what `loadImage("cactus.png")` expects, so these run as-is. Everything else is a single
+`.py` file. All seven `loadImage(...)` calls have been confirmed to resolve.
 
 Note that these sprites are third-party images of unverified provenance — the Flappy Bird sprite,
 the Chrome offline-dino and its cactus, and a stock-photo turtle. Swap in your own art before
