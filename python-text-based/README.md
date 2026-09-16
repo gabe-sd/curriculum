@@ -21,6 +21,7 @@ Non-graphical Python lessons and exercises, written for [Trinket](https://trinke
 | `recursive_countdown.py` | Minimal recursion |
 | `recursion_exercises.py` | Recursive vs. loop countdown |
 | `functions_as_values_demo.py` | Passing functions around as values |
+| `say_function.py` | Print text one letter at a time (Python 2 and 3 versions) |
 | `username_helper.py` | Strings, lists, and loops |
 | `madlibs.py` | Mad Libs |
 | `tic_tac_toe_text_based.py` | Two-player text tic-tac-toe |
