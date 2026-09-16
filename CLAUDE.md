@@ -1,6 +1,6 @@
 # curriculum
 
-Lessons for teaching middle- and high-school students (ages ~10–17) who have done basic Python (usually `turtle`), maybe text-based games or Scratch. Assume a 12-year-old is reading the code.
+Lessons for teaching middle- and high-school students (ages ~10–17) who have done basic Python (usually `turtle`), maybe text-based games or Scratch.
 
 ## Working with me
 
