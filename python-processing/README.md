@@ -1,7 +1,7 @@
 # python-processing
 
 Lessons using a Processing-style drawing API (`setup()`/`draw()`/`run()`), written for
-[Trinket](https://trinket.strivemath.org). Folders hold a project's code with its images.
+[Trinket](https://trinket.strivemath.org).
 
 | file | description |
 |---|---|
@@ -29,7 +29,7 @@ Lessons using a Processing-style drawing API (`setup()`/`draw()`/`run()`), writt
 | `infection_spread_simulation.py` | Infection spread simulation |
 | `rock_paper_scissors_gui/` | Rock paper scissors with image buttons |
 
-Some sprites are third-party images; replace them before using this material publicly.
+Note: some sprites are third-party images
 
 ## showcase/
 

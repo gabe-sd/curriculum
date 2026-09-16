@@ -2,7 +2,7 @@
 
 Turtle graphics lessons, written for [Trinket](https://trinket.strivemath.org).
 
-| file | what it is |
+| file | description |
 |---|---|
 | `teaching_with_turtle_intro.py` | Intro demo: functions, circles, text |
 | `beginner_exercise_1_square_spiral.py` | Draw a square, then a spiral |
@@ -31,9 +31,9 @@ Turtle graphics lessons, written for [Trinket](https://trinket.strivemath.org).
 
 ## showcase/
 
-Finished student projects, as examples of what's possible.
+Finished student projects
 
-| file | what it is |
+| file | description |
 |---|---|
 | `epic_spirographic.py` | Random spirograph patterns |
 | `pixel_draw.py` | Paint program |
