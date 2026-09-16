@@ -1,26 +1,39 @@
 # curriculum
 
-> **Draft — needs teacher review.** Drafted 2026-04-22 and not yet reviewed. At the start of the next session, remind the user to review and refine this file, then remove this banner.
-
----
-
 Lessons for teaching middle- and high-school students (ages ~10–17) who have done basic Python (usually `turtle`), maybe text-based games or Scratch. Assume a 12-year-old is reading the code.
+
+## Working with me
+
+Keep answers short and plain. Lead with the verdict or the answer; skip the write-up that
+produced it. When I ask to see a file, show it — don't attach an analysis. Don't restate
+findings I already have.
+
+## Git
+
+Use a separate commit for new work and leave history intact. Rewrite history only to remove
+personal information, and only while the branch is still unpushed (check `git branch -vv`).
+Don't push unless I say to.
+
+## Student privacy
+
+`2026-09-14-trinket-export/` is a local, gitignored archive of ~309 exported Trinket projects.
+63 are named after students, several with full names of minors. Never commit it or un-ignore it.
+
+When promoting any file out of it into the curriculum, check the source project name and the
+file's own comments and docstrings for names first. Scan docstrings, not just `#` comments.
 
 ## Structure
 
 This repo is organized by subject, one folder per subject. Currently:
 
-- `pygame/` — pygame game-programming lessons. All conventions below are specific to this folder.
+- `pygame/` — pygame game-programming lessons. The conventions below are specific to this folder.
+- `python-fundamentals/` — non-graphical: loops, functions, recursion, sorting, text games.
+- `python-turtle/` — turtle graphics: shapes, fractals, spirographs, turtle races.
+- `python-processing/` — Processing-style drawing API (`setup()`/`draw()`/`run()`). Projects needing images get their own folder with the images beside the code.
 
-More subject folders may be added later; if so, give each its own conventions section rather than assuming everything below applies repo-wide.
+The three `python-*` folders were imported from a Trinket archive and haven't been normalized. Each has a README describing its files. Match whatever file you're editing rather than applying the pygame rules to them.
 
 ## pygame/
-
-### Concepts in play
-
-Always available: variables, constants, `if`/`else`, `and`/`or`, `while`/`for`, lists, functions.
-
-Gated (advanced students only, and only when the lesson explicitly covers it): classes and OOP. Do not use classes unless the teacher has said this lesson is about OOP.
 
 ### Dependencies
 
@@ -36,12 +49,10 @@ Vanilla Python + `pygame` only. Standard-library modules (e.g. `random`) are fin
 ### Code style
 
 - Functions are fine when they genuinely help a student understand the code. Don't introduce them just for tidiness.
-- No classes unless the lesson is explicitly about OOP.
 - Constants `UPPER_CASE` (`WHITE`, `WINNING_SCORE`). Variable names descriptive (`paddle1`, not `p1`).
 - File order: imports → `pygame.init()` → window / clock / colors / font → game objects and state → game loop → `pygame.quit()`.
 - Game loop order: events → held keys → update → draw → `display.flip()` → `clock.tick(60)`.
 - `pygame.Rect` for positions, `colliderect` for collisions.
-- Repetition is often intentional. Don't DRY it up.
 - `str(x)` over f-strings unless f-strings have been taught.
 
 ### Commenting style
@@ -50,21 +61,13 @@ Comments teach. Explain *why* and introduce pygame concepts in plain language. K
 
 ### What NOT to do
 
-- Don't use classes unless the lesson is explicitly about OOP — classes are reserved for advanced students.
-- Don't refactor lesson code into "cleaner" versions — no extracting functions from procedural code, no DRY'ing up repetition, no reorganizing the game loop.
-- Don't use Python features the student hasn't seen: list comprehensions, f-strings, ternaries, dataclasses, type hints, walrus, decorators.
+- Don't use Python features the student hasn't seen: list comprehensions, ternaries, dataclasses, type hints, walrus, decorators.
 - Don't remove or condense teaching comments.
 - Don't add features beyond the lesson's scope, even if obvious.
-- Don't reach for advanced pygame APIs (`pygame.sprite.Group`, `pygame.math.Vector2`, custom events) unless the lesson calls for them.
 - Don't create new lesson files unprompted — curriculum decisions come from the teacher.
 
-### Polish vs core
-
-Sprites, music, sound effects, particles, animated backgrounds are **optional polish**, not part of core lessons. Keep them out of main lesson files unless a lesson explicitly covers them.
-
-### Lesson progression
+### Pygame lesson progression
 
 - `pong_part1.py` — two-player Pong. Window, game loop, `Rect`, `key.get_pressed()`, `colliderect`, text rendering, scoring.
 - `pong_part2.py` — win condition, post-point pause via `pygame.time.get_ticks()`, game over + restart. Introduces `KEYDOWN`, game state flag, timestamp pausing.
 - `flappybird_part1.py` — Flappy Bird. Lists of objects, `for` loops over lists, `append`/`pop`, gravity, `random.randint`, frame-counter timer.
-- `starter_code.py`, `clicker.py`, `spaceinvaders_part1.py` — present in `pygame/` but not yet documented here; add entries once reviewed.

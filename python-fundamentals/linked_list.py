@@ -4,7 +4,6 @@
 #   - pop() loses the value when there's only one item
 #   - addToEnd, remove, Max and Min crash on an empty list
 #   - the demo code at the bottom runs even if you import this file
-#   - it's all classes, which we save for advanced students
 
 class LinkedList:
     def __init__(self):
