@@ -22,9 +22,9 @@ renaming and no other edits:
 - **`python-turtle/`** (24 files) — turtle graphics: beginner shape exercises, fractals,
   spirographs, turtle races, a two-level tic-tac-toe. See its [README](python-turtle/README.md).
 - **`python-processing/`** (23 files; the five needing images live in per-project folders) — a Processing-style
-  drawing API distinct from `pygame/`: buttons, collision demos, Game of Life, Breakout, Pong,
+  drawing API distinct from `python-pygame/`: buttons, collision demos, Game of Life, Breakout, Pong,
   Dino Jump, Frogger, an OOP-focused aim trainer. See its [README](python-processing/README.md).
-  This folder has no established conventions yet, unlike `pygame/` (see `CLAUDE.md`).
+  This folder has no established conventions yet, unlike `python-pygame/` (see `CLAUDE.md`).
 
 These files were copied with minimal renaming and were not rewritten for teaching style. A few have
 since been edited — see [Post-import edits](#post-import-edits). They have not been verified to run
@@ -53,7 +53,7 @@ included file, retained in the archive for reference but not promoted as standal
 A further set of projects — functional but messy, or more advanced than current lessons (heavy OOP,
 several 1000+ line projects: Tetris, Tower Defense, Zombie Attack, Snake, Space Invaders variants)
 — were rated as possible-but-unpolished candidates and left out of the curated folders. Several use
-sprite-group/vector patterns beyond the scope of the current `pygame/` lessons and could seed more
+sprite-group/vector patterns beyond the scope of the current `python-pygame/` lessons and could seed more
 advanced material.
 
 ## Post-import edits

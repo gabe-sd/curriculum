@@ -26,7 +26,7 @@ file's own comments and docstrings for names first. Scan docstrings, not just `#
 
 This repo is organized by subject, one folder per subject. Currently:
 
-- `pygame/` — pygame game-programming lessons. The conventions below are specific to this folder.
+- `python-pygame/` — pygame game-programming lessons. The conventions below are specific to this folder.
 - `python-fundamentals/` — non-graphical: loops, functions, recursion, sorting, text games.
 - `python-turtle/` — turtle graphics: shapes, fractals, spirographs, turtle races.
 - `python-processing/` — Processing-style drawing API (`setup()`/`draw()`/`run()`). Projects needing images get their own folder with the images beside the code.
@@ -51,7 +51,7 @@ not lessons and are not part of any progression.
   names: comments, docstrings, string literals, and variable names. See "Student privacy" above.
 - Which projects get promoted is a teacher decision, like any other curriculum decision.
 
-## pygame/
+## python-pygame/
 
 ### Dependencies
 
@@ -59,7 +59,7 @@ Vanilla Python + `pygame` only. Standard-library modules (e.g. `random`) are fin
 
 ### File conventions
 
-- Files live in `pygame/`, named `<game>_part<N>.py`. Each part builds on the prior — keep the earlier code and its teaching comments intact; add to them.
+- Files live in `python-pygame/`, named `<game>_part<N>.py`. Each part builds on the prior — keep the earlier code and its teaching comments intact; add to them.
 - Top of file: banner comment with `# ===` borders, game name, part number, controls.
 - Part 2+: include a `# ===== NEW IN PART N =====` summary block near the top, and mark each added block inline with `# ===== NEW IN PART N: ... =====`.
 - Section dividers: `# --- Section ---` (major), `# -- subsection --` (minor).
