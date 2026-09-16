@@ -1,88 +1,44 @@
 # python-processing
 
-Lessons using a Processing-style (p5-for-python) drawing API: buttons, collision demos, Conway's
-Game of Life, Breakout, Pong, Dino Jump, Frogger, and an OOP-focused aim trainer. Sourced from an
-archive of Trinket projects — see [`TRINKET_IMPORT.md`](../TRINKET_IMPORT.md) for provenance. Files
-are unedited pulls (renamed only) and have not been rewritten to match a specific teaching style.
-Unlike `pygame/`, this folder has no established conventions yet (see `CLAUDE.md`).
+Lessons using a Processing-style drawing API (`setup()`/`draw()`/`run()`), written for
+[Trinket](https://trinket.io). Folders hold a project's code with its images.
 
-## Runtime
+| file | what it is |
+|---|---|
+| `inverted_squares_basic_example.py` | Shapes that follow the mouse |
+| `mouse_2d_example.py` | Classic "Mouse 2D" example |
+| `moving_rectangle.py` | Click to move a rectangle |
+| `button_function.py` | Reusable `button()` function |
+| `image_button_function.py` | Reusable image button |
+| `oop_dot_example.py` | Bouncing dots with a class |
+| `collision_function_demo.py` | Rectangle collision |
+| `fading_circle.py` | Fading circle animation |
+| `pulsing_circle.py` | Pulsing, color-cycling circle |
+| `rainbow_grid.py` | Rainbow grid with nested loops |
+| `bouncing_ball.py` | Ball bouncing off walls |
+| `game_of_life.py` | Conway's Game of Life |
+| `aim_labs_oop_intro.py` | Aim trainer, intro to classes |
+| `solar_system_simulation.py` | Orbiting planets with `translate`/`rotate` |
+| `squid_game_rotation_example.py` | Red Light Green Light, using `rotate()` |
+| `jump_game/` | Gravity and jumping |
+| `dino_jump/` | Dino runner |
+| `flappy_bird_starter/` | Flappy Bird starter |
+| `frogger.py` | Frogger |
+| `atari_breakout_finished.py` | Breakout |
+| `pong.py` | Pong against the computer |
+| `infection_spread_simulation.py` | Infection spread simulation |
+| `rock_paper_scissors_gui/` | Rock paper scissors with image buttons |
 
-These were written for Trinket, which runs Python in the browser through
-[Skulpt](https://github.com/skulpt/skulpt), a JavaScript implementation of Python. `from processing
-import *` resolves to Skulpt's `processing` module, which is a set of Python bindings over
-[Processing.js](http://processingjs.org/reference/) — the JavaScript port of the Processing 1.x API.
-Processing.js is no longer maintained.
-
-There is no pip-installable package that provides this same API, so these files do not run under
-desktop CPython as written. Run them in Trinket, or port them to another Processing-for-Python
-binding.
-
-Skulpt's `processing` deliberately differs from Processing.js in places, which matters when reading
-this code:
-
-- `mouseX` and `mouseY` are *functions*, not variables. The idiomatic forms are `mouse.x` and
-  `mouse.y`; `mouseX()` also works. Bare `mouseX` evaluates to the function object, so some files
-  here mix the two forms and may not behave as the student intended.
-- `mouse` also exposes `.px`, `.py`, `.pressed`, and `.button`.
-- A sketch starts with an explicit `run()` call at the end of the file rather than being
-  auto-started.
-
-The exact Skulpt build Trinket deploys could not be determined — its fork,
-[`trinketapp/skulpt`](https://github.com/trinketapp/skulpt), was last updated in 2021 and does not
-carry its own copy of `processing.js`. Treat the notes above as describing upstream Skulpt's
-behaviour, not a pinned version.
-
-| file | what it is | notes |
-|---|---|---|
-| `inverted_squares_basic_example.py` | Tiny mouseX/mouseY-driven shape demo | good intro-to-processing snippet |
-| `mouse_2d_example.py` | Port of the classic Processing "Mouse 2D" example | clean |
-| `moving_rectangle.py` | Click-to-move rectangle, with a commented-out auto-move alternative | good state/event intro |
-| `button_function.py` | Reusable, documented `button()` function | good template for a "GUI button" lesson |
-| `image_button_function.py` | Reusable image-button function | modular lesson snippet, pairs with `button_function.py` |
-| `oop_dot_example.py` | Small class + animation example (bouncing dots) | simple OOP-in-processing demo |
-| `collision_function_demo.py` | Rect-collision + class-instance-list pattern | well-commented teaching demo |
-| `fading_circle.py` | Alpha-fade animation using `frameCount` | minimal animation example |
-| `pulsing_circle.py` | Mouse-driven pulsing circle with color cycling | small, clean "juicy" visual-effects example |
-| `rainbow_grid.py` | Nested-loop 2D grid colored by mouse position + time | nice nested-loops/2D-lists example |
-| `bouncing_ball.py` | Basic bounce-off-walls physics | no assets needed |
-| `game_of_life.py` | Working Conway's Game of Life | only fully-functional version out of 4 attempts in the export |
-| `aim_labs_oop_intro.py` | Click-to-score aim trainer, explicitly framed as an "OOP Intro" | clean Ball class, best of several Aim Labs variants |
-| `solar_system_simulation.py` | Orbit/rotation demo (`translate`/`rotate`) | clean, well-commented, no image assets needed |
-| `squid_game_rotation_example.py` | Red-Light-Green-Light game demoing `rotate()`/`pushMatrix` | complete, well-commented, example-driven as the title suggests |
-| `jump_game/` | Minimal gravity/jump mechanic | project folder — code plus `turtle.png` |
-| `dino_jump/` | Dino-runner clone: obstacle class, collision, scoring, game over | most complete of ~6 dino-game attempts in the export; project folder — code plus cactus/dino images |
-| `flappy_bird_starter/` | Flappy Bird starter with heavy scaffolding comments and an explicit "NEXT:" prompt | reads like a teacher-authored starter, not a finished game; project folder — code plus the bird sprite |
-| `frogger.py` | Frogger clone: cars, collision, win/lose | best-organized of several Frogger attempts; has commented-out debug hitbox code worth keeping for teaching |
-| `atari_breakout_finished.py` | Complete Breakout: bricks, paddle bounce physics, game over | best of ~6 Breakout attempts in the export |
-| `pong.py` | Pong vs. a simple AI paddle, with scoring | clean OOP Paddle/Ball structure |
-| `infection_spread_simulation.py` | "Infection spread" simulation using a Ball class + collision checks | interesting simulation/algorithms angle, not just a game |
-| `rock_paper_scissors_gui/` | Image-button RPS with streak tracking and animation timing | project folder — code plus cactus/dino/turtle images |
-
-Projects that need image assets get their own folder, with the code and its images side by side —
-that is what `loadImage("cactus.png")` expects, so these run as-is. Everything else is a single
-`.py` file. All seven `loadImage(...)` calls have been confirmed to resolve.
-
-Note that these sprites are third-party images of unverified provenance — the Flappy Bird sprite,
-the Chrome offline-dino and its cactus, and a stock-photo turtle. Swap in your own art before
-relying on this material publicly.
-
-Bigger, messier games (Tower Defense, Zombie Attack, Snake, Space Invaders variants) that
-are functional but need real cleanup, plus many near-duplicate lesson-session variants, were not
-included here.
+Some sprites are third-party images; replace them before using this material publicly.
 
 ## showcase/
 
-Finished student projects, kept as examples of what's possible rather than as lessons. They are
-unedited and are not tidy teaching code. All are anonymous.
+Finished student projects, as examples of what's possible.
 
-| file | what it is | concepts |
-|---|---|---|
-| `tetris.py` | Complete Tetris: all seven pieces, rotation, line clears, scoring | classes, 2D grid, collision |
-| `number_puzzle.py` | Sliding 8-puzzle, click a tile to move it | 2D lists, mouse clicks, solve check |
-| `eight_ball_pool.py` | Billiards with a draggable cue and ball-to-ball physics | classes, vector math, elastic collision |
-| `asteroid_field/` | Arcade asteroid shooter with lives, score, and a saved high score | classes, images, file read/write |
-| `archer_tower/` | Tower defense — aim with the mouse, fire arrows at goblins | classes, images, projectiles |
-
-The two folders keep their images beside the code; `asteroid_field/` reads and writes `data.txt`
-for the high score.
+| file | what it is |
+|---|---|
+| `tetris.py` | Tetris |
+| `number_puzzle.py` | Sliding number puzzle |
+| `eight_ball_pool.py` | Pool |
+| `asteroid_field/` | Asteroid shooter |
+| `archer_tower/` | Tower defense |

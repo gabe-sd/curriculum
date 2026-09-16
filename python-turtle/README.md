@@ -1,66 +1,42 @@
 # python-turtle
 
-Turtle-graphics lessons: beginner shape exercises, fractals, spirographs, turtle races, and a
-two-level tic-tac-toe. Sourced from an archive of Trinket projects — see
-[`TRINKET_IMPORT.md`](../TRINKET_IMPORT.md) for provenance. Files are near-verbatim pulls (renamed
-only, apart from the attribution edits noted there) and have not been rewritten to match a specific
-teaching style.
+Turtle graphics lessons, written for [Trinket](https://trinket.io).
 
-## Runtime
-
-These were written for Trinket, which runs Python in the browser through
-[Skulpt](https://github.com/skulpt/skulpt), a JavaScript implementation of Python. Skulpt's `turtle`
-is its own canvas-based reimplementation of the CPython turtle API (`src/lib/turtle.js`), not
-CPython's tkinter-backed `turtle`. The common drawing calls match, so most of these files also run
-on desktop CPython, but screen setup, event binding, and anything relying on tkinter can differ —
-check before relying on a file in class.
-
-The exact Skulpt build Trinket deploys could not be determined; its fork,
-[`trinketapp/skulpt`](https://github.com/trinketapp/skulpt), was last updated in 2021.
-
-| file | what it is | notes |
-|---|---|---|
-| `teaching_with_turtle_intro.py` | Intro demo: functions, circles, text | explicitly written as a teaching file |
-| `beginner_exercise_1_square_spiral.py` | Beginner exercise: draw a square, then a spiral | short, clean, well-scoped |
-| `beginner_exercise_2_flower.py` | Follow-on beginner exercise: squarish flower | same style as exercise 1 |
-| `draw_square_function.py` | Parameterized `draw_square(x, y, size)` function | good functions+turtle intro |
-| `n_sided_shape_loop.py` | Function draws an n-sided polygon, reused in a loop | minimal functions+loops example |
-| `circles_spiral_simple.py` | Simple circle spiral using `input()` | tiny, clean |
-| `infinite_colored_shapes.py` | Infinite loop of randomly colored polygons | combines loops/random/color |
-| `flower_maker.py` | Randomized flower generator with color-list popping | best of several flower-drawing variants in the export |
-| `pixel_art_mushroom.py` | Pixel-art mushroom drawn from a 2D list grid | nice combined lists+turtle lesson |
-| `spider_web.py` | Loop-based spirograph-style web pattern | clean, simple |
-| `spirograph.py` | Spirograph with user-chosen angle and background color | best of ~6 near-identical spirograph variants in the export |
-| `spirograph_with_user_input.py` | Simpler spirograph, angle via `input()` | distinct enough from `spirograph.py` to keep both |
-| `spiral_n_sided_shape_user_input.py` | Spiral of an n-sided shape, size/sides from user input | distinct concept from the spirograph family |
-| `star_fractal.py` | Recursive fractal star | good intro-to-recursion turtle lesson |
-| `fractal_tree.py` | Recursive fractal tree | pairs with `star_fractal.py` and `h_fractal.py` as a mini recursion unit |
-| `h_fractal.py` | Recursive H-fractal | well-commented base case / recursive step |
-| `tree_fractal.py` | Another recursive fractal tree | distinct implementation from `fractal_tree.py` — compare and pick, or keep both for variety |
-| `tic_tac_toe_mouse_click.py` | Mouse-click tic-tac-toe board (no win-check yet) | well-structured, good base to build win-checking onto |
-| `tic_tac_toe_level_2.py` | Polished mouse-click tic-tac-toe with win-check and input validation | header credits Gabriel Venditti — appears to be an instructor reference implementation |
-| `turtle_race_2_0.py` | Turtle Race 2.0 | header credits the instructor |
-| `turtle_race_2_0_with_betting.py` | Turtle Race 2.0 plus a betting mechanic | teacher-authored, extends `turtle_race_2_0.py` |
-| `turtle_race_level_1.py` | Turtle Race, "Level 1" | teacher-authored, simplest version |
-| `turtle_race_level_2.py` | Turtle Race, "Level 2" | teacher-authored, builds on Level 1 |
-| `turtle_in_space.py` | Keyboard-controlled turtle "ship" (`onkey` bindings) | **references `space.jpg` and `rocketship.png`, which are not included — requires replacement images before it will run** |
-
-`turtle_race_2_0*` and `turtle_race_level_*` are two apparently-independent Turtle Race lesson
-families, both instructor-authored per their file headers; it's unclear whether they're two drafts
-of the same lesson or separate tracks.
-
-Additional near-duplicate Turtle Race and spirograph variants (from individual lesson sessions)
-were not included here.
+| file | what it is |
+|---|---|
+| `teaching_with_turtle_intro.py` | Intro demo: functions, circles, text |
+| `beginner_exercise_1_square_spiral.py` | Draw a square, then a spiral |
+| `beginner_exercise_2_flower.py` | Squarish flower |
+| `draw_square_function.py` | `draw_square(x, y, size)` function |
+| `n_sided_shape_loop.py` | n-sided polygon function, reused in a loop |
+| `circles_spiral_simple.py` | Circle spiral using `input()` |
+| `infinite_colored_shapes.py` | Endless randomly colored polygons |
+| `flower_maker.py` | Random flower generator |
+| `pixel_art_mushroom.py` | Pixel-art mushroom from a 2D list |
+| `spider_web.py` | Spider web pattern |
+| `spirograph.py` | Spirograph, user picks angle and background |
+| `spirograph_with_user_input.py` | Simpler spirograph, angle via `input()` |
+| `spiral_n_sided_shape_user_input.py` | Spiral of an n-sided shape |
+| `star_fractal.py` | Recursive fractal star |
+| `fractal_tree.py` | Recursive fractal tree |
+| `h_fractal.py` | Recursive H-fractal |
+| `tree_fractal.py` | Another recursive fractal tree |
+| `tic_tac_toe_mouse_click.py` | Mouse-click tic-tac-toe board, no win check |
+| `tic_tac_toe_level_2.py` | Mouse-click tic-tac-toe with win check |
+| `turtle_race_level_1.py` | Turtle race, level 1 |
+| `turtle_race_level_2.py` | Turtle race, level 2 |
+| `turtle_race_2_0.py` | Turtle race 2.0 |
+| `turtle_race_2_0_with_betting.py` | Turtle race 2.0 with betting |
+| `turtle_in_space.py` | Keyboard-controlled ship (needs `space.jpg` and `rocketship.png`, not included) |
 
 ## showcase/
 
-Finished student projects, kept as examples of what's possible rather than as lessons. They are
-unedited and are not tidy teaching code. All are anonymous.
+Finished student projects, as examples of what's possible.
 
-| file | what it is | concepts |
-|---|---|---|
-| `epic_spirographic.py` | Endless randomized spirograph patterns | loops, random colors, user input |
-| `pixel_draw.py` | Click-to-draw paint program with a color palette | classes, mouse click events |
-| `turtle_race_circle_track.py` | Turtle race on a circular track instead of a straight line | loops, random speeds, circular motion |
-| `tic_tac_toe.py` | Two-player tic-tac-toe drawn with turtle | 2D lists, input validation, win detection |
-| `chase_game/` | Chase game where turtles pursue each other; entry point is `main.py` | subclassing `Turtle`, keyboard events, collision |
+| file | what it is |
+|---|---|
+| `epic_spirographic.py` | Random spirograph patterns |
+| `pixel_draw.py` | Paint program |
+| `turtle_race_circle_track.py` | Turtle race on a circular track |
+| `tic_tac_toe.py` | Two-player tic-tac-toe |
+| `chase_game/` | Chase game |
