@@ -1,6 +1,6 @@
 # python-fundamentals
 
-Non-graphical Python lessons and exercises, written for [Trinket](https://trinket.io).
+Non-graphical Python lessons and exercises, written for [Trinket](https://trinket.strivemath.org).
 
 | file | what it is |
 |---|---|

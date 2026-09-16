@@ -1,6 +1,6 @@
 # python-turtle
 
-Turtle graphics lessons, written for [Trinket](https://trinket.io).
+Turtle graphics lessons, written for [Trinket](https://trinket.strivemath.org).
 
 | file | what it is |
 |---|---|

@@ -1,7 +1,7 @@
 # python-processing
 
 Lessons using a Processing-style drawing API (`setup()`/`draw()`/`run()`), written for
-[Trinket](https://trinket.io). Folders hold a project's code with its images.
+[Trinket](https://trinket.strivemath.org). Folders hold a project's code with its images.
 
 | file | what it is |
 |---|---|
