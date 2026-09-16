@@ -6,6 +6,18 @@ two-level tic-tac-toe. Sourced from an archive of Trinket projects — see
 only, apart from the attribution edits noted there) and have not been rewritten to match a specific
 teaching style.
 
+## Runtime
+
+These were written for Trinket, which runs Python in the browser through
+[Skulpt](https://github.com/skulpt/skulpt), a JavaScript implementation of Python. Skulpt's `turtle`
+is its own canvas-based reimplementation of the CPython turtle API (`src/lib/turtle.js`), not
+CPython's tkinter-backed `turtle`. The common drawing calls match, so most of these files also run
+on desktop CPython, but screen setup, event binding, and anything relying on tkinter can differ —
+check before relying on a file in class.
+
+The exact Skulpt build Trinket deploys could not be determined; its fork,
+[`trinketapp/skulpt`](https://github.com/trinketapp/skulpt), was last updated in 2021.
+
 | file | what it is | notes |
 |---|---|---|
 | `teaching_with_turtle_intro.py` | Intro demo: functions, circles, text | explicitly written as a teaching file |
@@ -42,17 +54,13 @@ were not included here.
 
 ## showcase/
 
-Finished student projects, kept here as examples of what's possible rather than as lessons. They
-aren't tidy teaching code and aren't meant to be read as a progression — the point is that a
-student built them. All are anonymous; no names are recorded anywhere in this folder.
+Finished student projects, kept as examples of what's possible rather than as lessons. They are
+unedited and are not tidy teaching code. All are anonymous.
 
 | file | what it is | concepts |
 |---|---|---|
 | `epic_spirographic.py` | Endless randomized spirograph patterns | loops, random colors, user input |
 | `pixel_draw.py` | Click-to-draw paint program with a color palette | classes, mouse click events |
-| `turtle_race_circle_track.py` | Turtle race run on a circular track instead of a straight line | loops, random speeds, circular motion |
+| `turtle_race_circle_track.py` | Turtle race on a circular track instead of a straight line | loops, random speeds, circular motion |
 | `tic_tac_toe.py` | Two-player tic-tac-toe drawn with turtle | 2D lists, input validation, win detection |
-| `chase_game/` | Chase/tag game where turtles pursue each other | subclassing `Turtle`, keyboard events, collision |
-
-`chase_game/` runs from `main.py`; `helpercode.py` beside it holds its helper functions.
-Everything else runs as-is.
+| `chase_game/` | Chase game where turtles pursue each other; entry point is `main.py` | subclassing `Turtle`, keyboard events, collision |

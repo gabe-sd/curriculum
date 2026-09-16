@@ -33,6 +33,24 @@ This repo is organized by subject, one folder per subject. Currently:
 
 The three `python-*` folders were imported from a Trinket archive and haven't been normalized. Each has a README describing its files. Match whatever file you're editing rather than applying the pygame rules to them.
 
+## showcase/
+
+Finished student projects kept as exemplars — things to show students as "you could build this."
+They live in `<subject>/showcase/` (currently `python-turtle/` and `python-processing/`). They are
+not lessons and are not part of any progression.
+
+- **Files go in unedited.** Byte-identical to the source. Do not add a header, do not add or
+  reword comments, do not rename variables, do not clean anything up, do not fix style. A file
+  that needs edits to run does not belong in `showcase/`.
+- **Never write anything into these files addressed to the teacher.** This is a public repo.
+  Notes about what was or wasn't changed go in the commit message.
+- What a project is and which concepts it shows go in the subject's README table, not in the file.
+- A project needing images or a second module gets its own folder, entry point `main.py`, assets
+  beside the code. Nothing else from the export is copied in — no `metadata.json`.
+- Anonymous, always. Before promoting anything, check the source project name and the file for
+  names: comments, docstrings, string literals, and variable names. See "Student privacy" above.
+- Which projects get promoted is a teacher decision, like any other curriculum decision.
+
 ## pygame/
 
 ### Dependencies

@@ -4,9 +4,34 @@ Lessons using a Processing-style (p5-for-python) drawing API: buttons, collision
 Game of Life, Breakout, Pong, Dino Jump, Frogger, and an OOP-focused aim trainer. Sourced from an
 archive of Trinket projects — see [`TRINKET_IMPORT.md`](../TRINKET_IMPORT.md) for provenance. Files
 are unedited pulls (renamed only) and have not been rewritten to match a specific teaching style.
-Unlike `pygame/`, this folder has no established conventions yet (see `CLAUDE.md`). The original
-Processing-for-Python library/environment these were written against is unknown; check
-compatibility with whichever library is installed before running them.
+Unlike `pygame/`, this folder has no established conventions yet (see `CLAUDE.md`).
+
+## Runtime
+
+These were written for Trinket, which runs Python in the browser through
+[Skulpt](https://github.com/skulpt/skulpt), a JavaScript implementation of Python. `from processing
+import *` resolves to Skulpt's `processing` module, which is a set of Python bindings over
+[Processing.js](http://processingjs.org/reference/) — the JavaScript port of the Processing 1.x API.
+Processing.js is no longer maintained.
+
+There is no pip-installable package that provides this same API, so these files do not run under
+desktop CPython as written. Run them in Trinket, or port them to another Processing-for-Python
+binding.
+
+Skulpt's `processing` deliberately differs from Processing.js in places, which matters when reading
+this code:
+
+- `mouseX` and `mouseY` are *functions*, not variables. The idiomatic forms are `mouse.x` and
+  `mouse.y`; `mouseX()` also works. Bare `mouseX` evaluates to the function object, so some files
+  here mix the two forms and may not behave as the student intended.
+- `mouse` also exposes `.px`, `.py`, `.pressed`, and `.button`.
+- A sketch starts with an explicit `run()` call at the end of the file rather than being
+  auto-started.
+
+The exact Skulpt build Trinket deploys could not be determined — its fork,
+[`trinketapp/skulpt`](https://github.com/trinketapp/skulpt), was last updated in 2021 and does not
+carry its own copy of `processing.js`. Treat the notes above as describing upstream Skulpt's
+behaviour, not a pinned version.
 
 | file | what it is | notes |
 |---|---|---|
@@ -48,9 +73,8 @@ included here.
 
 ## showcase/
 
-Finished student projects, kept here as examples of what's possible rather than as lessons. They
-aren't tidy teaching code and aren't meant to be read as a progression — the point is that a
-student built them. All are anonymous; no names are recorded anywhere in this folder.
+Finished student projects, kept as examples of what's possible rather than as lessons. They are
+unedited and are not tidy teaching code. All are anonymous.
 
 | file | what it is | concepts |
 |---|---|---|
@@ -60,6 +84,5 @@ student built them. All are anonymous; no names are recorded anywhere in this fo
 | `asteroid_field/` | Arcade asteroid shooter with lives, score, and a saved high score | classes, images, file read/write |
 | `archer_tower/` | Tower defense — aim with the mouse, fire arrows at goblins | classes, images, projectiles |
 
-The two folders keep their images beside the code. `asteroid_field/` also reads and writes
-`data.txt` for the high score. `eight_ball_pool.py` had one expression corrected (`mouse.x` to
-`mouseX`) so it runs outside Trinket; the others are unchanged.
+The two folders keep their images beside the code; `asteroid_field/` reads and writes `data.txt`
+for the high score.
