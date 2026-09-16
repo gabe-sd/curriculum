@@ -1,6 +1,6 @@
 # Trinket archive import
 
-`python-fundamentals/`, `python-turtle/`, and `python-processing/` contain lessons curated from an
+`python-text-based/`, `python-turtle/`, and `python-processing/` contain lessons curated from an
 archive of roughly 309 Trinket projects (lesson drafts and student work) exported 2026-09-14. The
 archive itself is not stored in this repo (see `.gitignore`); the review of it is preserved here.
 
@@ -17,8 +17,8 @@ number-guessing games — were consolidated to one representative each.
 76 files rated reusable, after deduplication, were copied into the folders below with minimal
 renaming and no other edits:
 
-- **`python-fundamentals/`** (28 files) — non-graphical: loops, functions, classes intro,
-  recursion, sorting/linked-list basics. See its [README](python-fundamentals/README.md).
+- **`python-text-based/`** (28 files) — non-graphical: loops, functions, classes intro,
+  recursion, sorting/linked-list basics. See its [README](python-text-based/README.md).
 - **`python-turtle/`** (24 files) — turtle graphics: beginner shape exercises, fractals,
   spirographs, turtle races, a two-level tic-tac-toe. See its [README](python-turtle/README.md).
 - **`python-processing/`** (23 files; the five needing images live in per-project folders) — a Processing-style
@@ -68,7 +68,7 @@ imported:
   was dropped in the rename. The archive itself is gitignored and has never been committed.
 - **Removed the employer/school line** from the author headers of the four
   `python-turtle/turtle_race*` files, leaving the `Author:` line unchanged.
-- **Fixed Python 2 prints.** `python-fundamentals/python_practice_problems_level_1.py` lines 85, 87
+- **Fixed Python 2 prints.** `python-text-based/python_practice_problems_level_1.py` lines 85, 87
   and 88 converted from `print x` to `print(x)`, keeping the existing `str()` concatenation rather
   than introducing f-strings. The file now runs and reports `0/10 passed` — which is correct: its
   functions are unfilled `pass` stubs by design, and the harness is what a student runs to check
@@ -77,4 +77,4 @@ imported:
 ## Layout
 
 - Archive: `2026-09-14-trinket-export/` (gitignored, local only)
-- Curated lessons: `python-fundamentals/`, `python-turtle/`, `python-processing/`
+- Curated lessons: `python-text-based/`, `python-turtle/`, `python-processing/`

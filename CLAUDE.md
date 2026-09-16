@@ -27,7 +27,7 @@ file's own comments and docstrings for names first. Scan docstrings, not just `#
 This repo is organized by subject, one folder per subject. Currently:
 
 - `python-pygame/` — pygame game-programming lessons. The conventions below are specific to this folder.
-- `python-fundamentals/` — non-graphical: loops, functions, recursion, sorting, text games.
+- `python-text-based/` — non-graphical: loops, functions, recursion, sorting, text games.
 - `python-turtle/` — turtle graphics: shapes, fractals, spirographs, turtle races.
 - `python-processing/` — Processing-style drawing API (`setup()`/`draw()`/`run()`). Projects needing images get their own folder with the images beside the code.
 

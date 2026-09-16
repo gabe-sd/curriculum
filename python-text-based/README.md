@@ -1,4 +1,4 @@
-# python-fundamentals
+# python-text-based
 
 Non-graphical Python lessons and exercises, written for [Trinket](https://trinket.strivemath.org).
 

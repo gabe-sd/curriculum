@@ -5,7 +5,7 @@ Lessons for teaching elementary, middle, and high-school students, ranging from 
 Organized by subject, one folder per subject:
 
 - `python-pygame/` — pygame game-programming lessons
-- `python-fundamentals/` — non-graphical Python: loops, functions, recursion, sorting, text games
+- `python-text-based/` — non-graphical Python: loops, functions, recursion, sorting, text games
 - `python-turtle/` — turtle graphics: shapes, fractals, spirographs, turtle races
 - `python-processing/` — Processing-style drawing API (`setup()`/`draw()`/`run()`)
 
