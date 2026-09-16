@@ -1,6 +1,6 @@
 # curriculum
 
-Lessons for teaching elementary, middle, and high-school students, ranging from fundamentals through college-level material.
+Project based lessons for teaching elementary, middle, and high-school students, ranging from fundamentals through college-level material.
 
 Organized by subject, one folder per subject:
 
