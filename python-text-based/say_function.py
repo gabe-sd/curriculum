@@ -1,7 +1,7 @@
 # --- print text one letter at a time ---
 
 
-# PYTHON 2 
+# Trinket python version
 from sys import stdout
 from time import sleep
 
@@ -13,7 +13,7 @@ def say(text):
     print()
     
     
-# PYTHON 3
+# Python 3 version (local dev env)
 from time import sleep
 
 def say(text):
