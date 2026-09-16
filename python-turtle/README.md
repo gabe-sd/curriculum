@@ -39,3 +39,20 @@ of the same lesson or separate tracks.
 
 Additional near-duplicate Turtle Race and spirograph variants (from individual lesson sessions)
 were not included here.
+
+## showcase/
+
+Finished student projects, kept here as examples of what's possible rather than as lessons. They
+aren't tidy teaching code and aren't meant to be read as a progression — the point is that a
+student built them. All are anonymous; no names are recorded anywhere in this folder.
+
+| file | what it is | concepts |
+|---|---|---|
+| `epic_spirographic.py` | Endless randomized spirograph patterns | loops, random colors, user input |
+| `pixel_draw.py` | Click-to-draw paint program with a color palette | classes, mouse click events |
+| `turtle_race_circle_track.py` | Turtle race run on a circular track instead of a straight line | loops, random speeds, circular motion |
+| `tic_tac_toe.py` | Two-player tic-tac-toe drawn with turtle | 2D lists, input validation, win detection |
+| `chase_game/` | Chase/tag game where turtles pursue each other | subclassing `Turtle`, keyboard events, collision |
+
+`chase_game/` runs from `main.py`; `helpercode.py` beside it holds its helper functions.
+Everything else runs as-is.

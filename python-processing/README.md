@@ -42,6 +42,24 @@ Note that these sprites are third-party images of unverified provenance — the 
 the Chrome offline-dino and its cactus, and a stock-photo turtle. Swap in your own art before
 relying on this material publicly.
 
-Bigger, messier games (Tetris, Tower Defense, Zombie Attack, Snake, Space Invaders variants) that
+Bigger, messier games (Tower Defense, Zombie Attack, Snake, Space Invaders variants) that
 are functional but need real cleanup, plus many near-duplicate lesson-session variants, were not
 included here.
+
+## showcase/
+
+Finished student projects, kept here as examples of what's possible rather than as lessons. They
+aren't tidy teaching code and aren't meant to be read as a progression — the point is that a
+student built them. All are anonymous; no names are recorded anywhere in this folder.
+
+| file | what it is | concepts |
+|---|---|---|
+| `tetris.py` | Complete Tetris: all seven pieces, rotation, line clears, scoring | classes, 2D grid, collision |
+| `number_puzzle.py` | Sliding 8-puzzle, click a tile to move it | 2D lists, mouse clicks, solve check |
+| `eight_ball_pool.py` | Billiards with a draggable cue and ball-to-ball physics | classes, vector math, elastic collision |
+| `asteroid_field/` | Arcade asteroid shooter with lives, score, and a saved high score | classes, images, file read/write |
+| `archer_tower/` | Tower defense — aim with the mouse, fire arrows at goblins | classes, images, projectiles |
+
+The two folders keep their images beside the code. `asteroid_field/` also reads and writes
+`data.txt` for the high score. `eight_ball_pool.py` had one expression corrected (`mouse.x` to
+`mouseX`) so it runs outside Trinket; the others are unchanged.
