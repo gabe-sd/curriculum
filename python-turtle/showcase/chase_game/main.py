@@ -1,9 +1,3 @@
-# =====================================================================
-# Showcase: Chase Game
-# Concepts: classes that build on Turtle, keyboard events, collision detection
-# Student project. Runs from main.py; helpercode.py holds its helper functions. Kept as written.
-# =====================================================================
-
 import turtle
 from helpercode import checkpos, intersect, Counter
 import random

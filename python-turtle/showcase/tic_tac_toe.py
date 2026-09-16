@@ -1,9 +1,3 @@
-# =====================================================================
-# Showcase: Tic Tac Toe
-# Concepts: 2D lists, input validation, checking for a win
-# Student project. Kept as written.
-# =====================================================================
-
 import turtle
 win = False
 

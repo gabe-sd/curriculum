@@ -1,9 +1,3 @@
-# =====================================================================
-# Showcase: Asteroid Field
-# Concepts: classes, images, lives and score, saving a high score to a file
-# Student project. Images moved next to the code; the program itself is unchanged.
-# =====================================================================
-
 from processing import *
 
 score = 0

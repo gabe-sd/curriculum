@@ -1,9 +1,3 @@
-# =====================================================================
-# Showcase: Turtle Race (circular track)
-# Concepts: loops, random speeds, moving along a circle
-# Student project. Kept as written.
-# =====================================================================
-
 from turtle import *
 from random import randint
 

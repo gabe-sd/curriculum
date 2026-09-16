@@ -1,9 +1,3 @@
-# =====================================================================
-# Showcase: Pixel Draw
-# Concepts: classes, mouse click events, a color-picker palette
-# Student project. Kept as written.
-# =====================================================================
-
 from turtle import *
 
 screen = Screen()

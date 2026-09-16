@@ -1,9 +1,3 @@
-# =====================================================================
-# Showcase: Sliding Number Puzzle
-# Concepts: 2D lists, mouse clicks, checking if the puzzle is solved
-# Student project. Kept as written.
-# =====================================================================
-
 from processing import *
 import random as r
 

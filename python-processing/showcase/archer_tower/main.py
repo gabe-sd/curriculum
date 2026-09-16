@@ -1,9 +1,3 @@
-# =====================================================================
-# Showcase: Archer Tower
-# Concepts: classes, images, aiming with the mouse, firing projectiles
-# Student project. Images moved next to the code; the program itself is unchanged.
-# =====================================================================
-
 from processing import *
 
 def setup():

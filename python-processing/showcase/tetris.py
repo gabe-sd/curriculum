@@ -1,9 +1,3 @@
-# =====================================================================
-# Showcase: Tetris
-# Concepts: classes, a 2D grid, rotating shapes, clearing lines, scoring
-# Student project. Kept as written.
-# =====================================================================
-
 from processing import *
 import random
 import time

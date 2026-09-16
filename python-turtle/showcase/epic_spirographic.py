@@ -1,9 +1,3 @@
-# =====================================================================
-# Showcase: Epic Spirographic
-# Concepts: loops, random colors, user input
-# Student project. Kept as written.
-# =====================================================================
-
 import turtle
 import random
 #rember to import rng and turtle
