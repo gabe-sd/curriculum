@@ -20,7 +20,7 @@ Don't push unless I say to.
 63 are named after students, several with full names of minors. Never commit it or un-ignore it.
 
 When promoting any file out of it into the curriculum, check the source project name and the
-file's own comments and docstrings for names first. Scan docstrings, not just `#` comments.
+file for names first: comments, docstrings, string literals, and variable names.
 
 ## Structure
 
@@ -36,8 +36,7 @@ This repo is organized by subject, one folder per subject. Currently:
 ## showcase/
 
 Finished student projects kept as exemplars — things to show students as "you could build this."
-They live in `<subject>/showcase/` (currently `python-turtle/` and `python-processing/`). They are
-not lessons and are not part of any progression.
+They live in `<subject>/showcase/`. They are not lessons and are not part of any progression.
 
 - **Files go in unedited.** Byte-identical to the source. Do not add a header, do not add or
   reword comments, do not rename variables, do not clean anything up, do not fix style. A file
@@ -47,8 +46,6 @@ not lessons and are not part of any progression.
 - What a project is and which concepts it shows go in the subject's README table, not in the file.
 - A project needing images or a second module gets its own folder, entry point `main.py`, assets
   beside the code. Nothing else from the export is copied in — no `metadata.json`.
-- Anonymous, always. Before promoting anything, check the source project name and the file for
-  names: comments, docstrings, string literals, and variable names. See "Student privacy" above.
 - Which projects get promoted is a teacher decision, like any other curriculum decision.
 
 ## python-pygame/
@@ -59,7 +56,7 @@ Vanilla Python + `pygame` only. Standard-library modules (e.g. `random`) are fin
 
 ### File conventions
 
-- Files live in `python-pygame/`, named `<game>_part<N>.py`. Each part builds on the prior — keep the earlier code and its teaching comments intact; add to them.
+- Named `<game>_part<N>.py`. Each part builds on the prior — keep the earlier code and its teaching comments intact; add to them.
 - Top of file: banner comment with `# ===` borders, game name, part number, controls.
 - Part 2+: include a `# ===== NEW IN PART N =====` summary block near the top, and mark each added block inline with `# ===== NEW IN PART N: ... =====`.
 - Section dividers: `# --- Section ---` (major), `# -- subsection --` (minor).
@@ -83,9 +80,3 @@ Comments teach. Explain *why* and introduce pygame concepts in plain language. K
 - Don't remove or condense teaching comments.
 - Don't add features beyond the lesson's scope, even if obvious.
 - Don't create new lesson files unprompted — curriculum decisions come from the teacher.
-
-### Pygame lesson progression
-
-- `pong_part1.py` — two-player Pong. Window, game loop, `Rect`, `key.get_pressed()`, `colliderect`, text rendering, scoring.
-- `pong_part2.py` — win condition, post-point pause via `pygame.time.get_ticks()`, game over + restart. Introduces `KEYDOWN`, game state flag, timestamp pausing.
-- `flappybird_part1.py` — Flappy Bird. Lists of objects, `for` loops over lists, `append`/`pop`, gravity, `random.randint`, frame-counter timer.
