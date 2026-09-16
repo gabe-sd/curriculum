@@ -31,7 +31,7 @@ This repo is organized by subject, one folder per subject. Currently:
 - `python-turtle/` — turtle graphics: shapes, fractals, spirographs, turtle races.
 - `python-processing/` — Processing-style drawing API (`setup()`/`draw()`/`run()`). Projects needing images get their own folder with the images beside the code.
 
-The three `python-*` folders were imported from a Trinket archive and haven't been normalized. Each has a README describing its files. Match whatever file you're editing rather than applying the pygame rules to them.
+`python-text-based/`, `python-turtle/`, and `python-processing/` were imported from a Trinket archive and haven't been normalized. Each has a README describing its files. Match whatever file you're editing rather than applying the pygame rules to them.
 
 ## showcase/
 
