@@ -2,7 +2,7 @@
 
 Non-graphical Python lessons and exercises, written for [Trinket](https://trinket.strivemath.org).
 
-| file | what it is |
+| file | description |
 |---|---|
 | `beginner_exercises_1.py` | Intro exercises: print, input, random, a guessing game |
 | `guessing_game.py` | Guess the computer's number |

@@ -8,7 +8,7 @@ pip install pygame
 python pong_part1.py
 ```
 
-| file | what it is |
+| file | description |
 |---|---|
 | `starter_code.py` | Empty window and game loop to start from |
 | `pong_part1.py` | Two-player Pong |

@@ -3,7 +3,7 @@
 Lessons using a Processing-style drawing API (`setup()`/`draw()`/`run()`), written for
 [Trinket](https://trinket.strivemath.org). Folders hold a project's code with its images.
 
-| file | what it is |
+| file | description |
 |---|---|
 | `inverted_squares_basic_example.py` | Shapes that follow the mouse |
 | `mouse_2d_example.py` | Classic "Mouse 2D" example |
@@ -35,7 +35,7 @@ Some sprites are third-party images; replace them before using this material pub
 
 Finished student projects, as examples of what's possible.
 
-| file | what it is |
+| file | description |
 |---|---|
 | `tetris.py` | Tetris |
 | `number_puzzle.py` | Sliding number puzzle |
