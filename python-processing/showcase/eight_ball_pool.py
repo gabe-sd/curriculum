@@ -56,8 +56,8 @@ class Cue:
   
   def chargeCue(self):
     if mousePressed:
-      if ((lastMY-mouseY)*math.sin(self.angle)+((lastMX-mouse.x)*math.cos(self.angle)))/2+balls[0].radius <= 80:
-        self.retract = ((lastMY-mouseY)*math.sin(self.angle)+((lastMX-mouse.x)*math.cos(self.angle)))/2+balls[0].radius
+      if ((lastMY-mouseY)*math.sin(self.angle)+((lastMX-mouseX)*math.cos(self.angle)))/2+balls[0].radius <= 80:
+        self.retract = ((lastMY-mouseY)*math.sin(self.angle)+((lastMX-mouseX)*math.cos(self.angle)))/2+balls[0].radius
       if self.retract < balls[0].radius:
         self.retract = balls[0].radius
       self.power = self.retract-2*balls[0].radius
